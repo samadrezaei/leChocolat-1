@@ -13,6 +13,11 @@
     <!-- Local external CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Le Chocolat</title>
+    <style>
+        #modalClicker{
+            cursor:pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,7 +36,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span>
                             Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>
@@ -41,10 +46,59 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>
                             Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a id="modalClicker" data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
 
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email
+                                address
+                            </label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword3">
+                                Password
+                            </label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox">
+                                Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        Sign in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Header-->
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header align-items-center">
@@ -61,13 +115,17 @@
 
                 <!--Reserve baskets button-->
                 <div class="col-12 col-sm-3">
-                    <a class="btn btn-warning btn-sm" href="#reserve-form" role="button">Reserve your baskets</a>
+                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" data-html="true"
+                        title="Or Call us at <br><strong>+ 987 6543 2100</strong>" data-placement="bottom" href="#reserve-form">
+                        Reserve your baskets
+                    </a>
                 </div>
             </div>
         </div>
         </div>
     </header>
 
+    <!--Main content-->
     <div class="container">
 
         <!--first row-->
@@ -104,8 +162,22 @@
                 </div>
             </div>
         </div>
-
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
         <!-- third row -->
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
         <div class="row flex-row-reverse row-content align-items-center">
             <div class="col-sm-4 col-md-3">
                 <h3>Meet our Specialists</h3>
@@ -208,6 +280,7 @@
 
     </div>
 
+    <!--Footer-->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -268,6 +341,15 @@
     </footer>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 
 </body>
 
