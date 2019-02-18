@@ -55,19 +55,19 @@
         </div>
     </nav>
 
+    <!--Login-->
+
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Login </h4>
                     <button type="button" class="close" data-dismiss="modal">&times</button>
                 </div>
                 <div class="modal-body">
                     <form class="form-inline">
                         <div class="form-group">
-                            <label class="sr-only" for="exampleInputEmail3">Email
-                                address
+                            <label class="sr-only" for="exampleInputEmail3">Email address
                             </label>
                             <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
                                 placeholder="Enter email">
@@ -115,13 +115,11 @@
 
                 <!--Reserve baskets button-->
                 <div class="col-12 col-sm-3">
-                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" data-html="true"
-                        title="Or Call us at <br><strong>+ 987 6543 2100</strong>" data-placement="bottom" href="#reserve-form">
+                    <a id="modalClick" data-toggle="modal" data-target="#Reservation">
                         Reserve your baskets
                     </a>
                 </div>
             </div>
-        </div>
         </div>
     </header>
 
@@ -183,7 +181,7 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                    
+
                 </div>
             </div>
         </div>
@@ -242,15 +240,15 @@
         </div>
 
         <!-- Reserve your Baskets -->
-        <div class="row row-content justify-content-center">
-            <div class="col-12 col-sm-8 ">
-                <div class="card border-default">
+        <div id="Reservation" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reserve your baskets </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times</button>
+                    </div>
 
-                    <!-- Card Header -->
-                    <h3 class="card-header bg-warning text-white" id="reserve-form">Reserve your baskets</h3>
-
-                    <!-- Card Body -->
-                    <div class="card-body">
+                    <div class="modal-body">
 
                         <form>
 
@@ -311,12 +309,34 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="time"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                                     </div>
-                                    <input type="time" class="form-control" placeholder="Time" id="time'">
+                                    <input type="time" class="form-control">
                                 </div>
                             </div>
 
+                            <!--DELIVERY-->
+                            <label for="optradio" class="col-12 col-sm-3 col-form-label">
+                                Number of baskets
+                            </label>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-success">
+                                    <div class="form-check form-check-inline"></div><input class="form-check-input"
+                                        type="radio" name="ReserveOptions" id="ReserveRadio1" value="option1.2">Yes
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <div class="form-check form-check-inline"></div><input class="form-check-input"
+                                        type="radio" name="ReserveOptions" id="ReserveRadio2" value="option2.2">No
+                                </button>
+                            </div>
+
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-sm">Reserve</button>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-sm" data-dismiss="modal">
+                                    Submit
+                                </button>
+                            </div>
+
                         </form>
                     </div>
                 </div>
